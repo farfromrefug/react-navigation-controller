@@ -14,6 +14,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _rebound = require('rebound');
 
 var _rebound2 = _interopRequireDefault(_rebound);
@@ -665,12 +669,12 @@ var NavigationController = function (_React$Component) {
 }(_react2.default.Component);
 
 NavigationController.propTypes = {
-  views: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.element).isRequired,
-  preserveState: _react2.default.PropTypes.bool,
-  preserveDom: _react2.default.PropTypes.bool,
-  transitionTension: _react2.default.PropTypes.number,
-  transitionFriction: _react2.default.PropTypes.number,
-  className: _react2.default.PropTypes.oneOf([_react2.default.PropTypes.string, _react2.default.PropTypes.object])
+  views: _propTypes2.default.arrayOf(_propTypes2.default.element).isRequired,
+  preserveState: _propTypes2.default.bool,
+  preserveDom: _propTypes2.default.bool,
+  transitionTension: _propTypes2.default.number,
+  transitionFriction: _propTypes2.default.number,
+  className: _propTypes2.default.oneOf([_propTypes2.default.string, _propTypes2.default.object])
 };
 
 NavigationController.defaultProps = {
