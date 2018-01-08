@@ -1,6 +1,6 @@
 /* global requestAnimationFrame */
 import React from 'react'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import rebound from 'rebound'
 import classNames from 'classnames'
 
@@ -221,11 +221,11 @@ class NavigationController extends React.Component {
 
     if (this.__nextViewList) {
       const topViewIndex = this.__nextViewList.length - 1
-      this.setState({
-        transition: null,
+    this.setState({
+      transition: null,
         views: this.__nextViewList,
         mountedViews: [topViewIndex]
-      })
+    })
       this.__nextViewList = null
     } else {
       const topViewIndex = this.state.views.length - 1
@@ -233,7 +233,7 @@ class NavigationController extends React.Component {
         transition: null,
         mountedViews: [topViewIndex]
       })
-    }
+  }
   }
 
   /**
@@ -514,7 +514,7 @@ class NavigationController extends React.Component {
     // If not preserveDom and this view is not visible now, return null.
     if (!this.props.preserveDom && this.state.mountedViews.indexOf(index) === -1) {
       return null
-    }
+  }
     return React.cloneElement(node, {
       ref: `view-${index}`,
       navigationController: this
@@ -535,10 +535,10 @@ class NavigationController extends React.Component {
           this.state.views.map((item, index) => {
             return <div key={index} ref={`view-wrapper-${index}`} className={wrapperClassName}>
               {this.__renderNode(item, index)}
-            </div>
+        </div>
           })
         }
-      </div>
+        </div>
     )
   }
 
@@ -552,7 +552,7 @@ NavigationController.propTypes = {
   preserveDom: PropTypes.bool,
   transitionTension: PropTypes.number,
   transitionFriction: PropTypes.number,
-  className: PropTypes.oneOf([
+  className: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object
   ])
