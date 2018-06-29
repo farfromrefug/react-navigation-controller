@@ -2,57 +2,34 @@
   "name": "react-navigation-controller",
   "version": "3.1.1",
   "description": "React view manager similar to UINavigationController",
-  "keywords": [
-    "react",
-    "react-component"
-  ],
-  "license": "MIT",
-  "main": "dist/navigation-controller.js",
+  "main": "./dist/react-navigation-controller.js",
+  "types": "./dist/react-navigation-controller.d.ts",
   "scripts": {
-    "start": "webpack-dev-server --content-base examples/ --port 3000 --hot",
-    "test": "./node_modules/karma/bin/karma start",
-    "dist": "rm -rf dist && mkdir dist && babel src --out-dir dist",
-    "dist/example": "webpack --dist",
-    "prepublish": "npm run dist",
-    "lint": "standard"
+    "prepublish": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:aputinski/react-navigation-controller.git"
+    "url": "https://github.com/farfromrefug/react-navigation-controller"
   },
-  "author": "Adam Putinski",
+  "author": "Martin Guillon",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^16.3.1"
+  },
   "dependencies": {
-    "classnames": "2.2.5",
-    "prop-types": "^15.5.10",
+    "classnames": "^2.2.6",
+    "prop-types": "^15.6.2",
     "rebound": "0.0.15"
   },
   "devDependencies": {
-    "babel-cli": "6.11.4",
-    "babel-core": "6.13.2",
-    "babel-loader": "6.2.5",
-    "babel-preset-es2015": "6.13.2",
-    "babel-preset-react": "6.11.1",
-    "chai": "3.5.0",
-    "karma": "1.2.0",
-    "karma-chai": "0.1.0",
-    "karma-chrome-launcher": "2.0.0",
-    "karma-mocha": "1.1.1",
-    "karma-spec-reporter": "0.0.26",
-    "karma-webpack": "1.8.0",
-    "minimist": "1.2.0",
-    "mocha": "3.0.2",
-    "react": "15.3.1",
-    "react-addons-test-utils": "15.3.1",
-    "react-dom": "15.3.1",
-    "sinon": "1.17.5",
-    "standard": "8.0.0-beta.5",
-    "webpack": "1.13.2",
-    "webpack-dev-server": "1.14.1"
-  },
-  "standard": {
-    "ignore": [
-      "node_modules/**/*",
-      "examples/assets/**/*"
-    ]
+    "@types/node": "^7.0.60",
+    "@types/react": "^16.4.5",
+    "lodash.throttle": "^4.1.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-resizable": "^1.7.5",
+    "ts-loader": "^4.4.2",
+    "typescript": "^2.8.1"
   }
 }

@@ -1,4 +1,3 @@
-"use strict";
 /*!
  * Adapted from LoDash
  *
@@ -16,27 +15,6 @@
  * permit persons to whom the Software is furnished to do so, subject to
  * the following conditions:
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-function dropRight(array, n = 1) {
-    const length = array ? array.length : 0;
-    if (!length) {
-        return [];
-    }
-    n = length - (+n || 0);
-    return array.slice(0, n < 0 ? 0 : n);
-}
-exports.dropRight = dropRight;
-function last(array) {
-    const length = array ? array.length : 0;
-    return length ? array[length - 1] : undefined;
-}
-exports.last = last;
-function takeRight(array, n = 1) {
-    var length = array ? array.length : 0;
-    if (!length) {
-        return [];
-    }
-    n = length - (+n || 0);
-    return array.slice(n < 0 ? 0 : n);
-}
-exports.takeRight = takeRight;
+export declare function dropRight(array: any, n?: number): any;
+export declare function last(array: any): any;
+export declare function takeRight(array: any, n?: number): any;
