@@ -203,7 +203,6 @@ class NavigationController extends React.Component {
             }
         };
         const [prev, next] = this.__viewIndexes;
-        console.log('__transitionViews', prev, next);
         const prevView = this.references[`view-${prev}`];
         const nextView = this.references[`view-${next}`];
         if (prevView && prevView !== nextView && typeof prevView.navigationControllerWillHideView === 'function') {
@@ -260,7 +259,6 @@ class NavigationController extends React.Component {
         const prev = views.length - 1;
         const next = prev + 1;
         this.__viewIndexes = [prev, next];
-        console.log('__viewIndexes', this.__viewIndexes);
         views = views.concat(view);
         this.setState({
             transition,

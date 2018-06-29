@@ -289,7 +289,6 @@ class NavigationController extends React.Component<NavigationControllerProps, Na
             }
         };
         const [prev, next] = this.__viewIndexes;
-        console.log('__transitionViews', prev, next);
         const prevView = this.references[`view-${prev}`];
         const nextView = this.references[`view-${next}`];
         // Will hide view lifecycle event
@@ -363,7 +362,6 @@ class NavigationController extends React.Component<NavigationControllerProps, Na
         const prev = views.length - 1;
         const next = prev + 1;
         this.__viewIndexes = [prev, next];
-        console.log('__viewIndexes', this.__viewIndexes);
         // Add the new view
         views = views.concat(view);
         // Push the view
