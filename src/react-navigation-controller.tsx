@@ -68,14 +68,12 @@ function checkOptions(method, options) {
     });
 }
 
-export interface NavigationControllerProps extends React.DOMAttributes<{}> {
+export interface NavigationControllerProps extends React.HTMLAttributes<{}> {
     views: PropTypes.element[];
     preserveState?: PropTypes.bool;
     preserveDom?: PropTypes.bool;
     transitionTension?: PropTypes.number;
     transitionFriction?: PropTypes.number;
-    className?: PropTypes.string | PropTypes.object;
-    style?: React.CSSProperties;
 }
 export interface NavigationControllerState {
     views?: any[];
